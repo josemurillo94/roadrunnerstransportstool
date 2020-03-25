@@ -180,7 +180,7 @@ namespace TS_SE_Tool
 
         private void Check()
         {
-            string newversionData = GetLatestVersionData("https://rebrand.ly/TS-SET-CheckVersion");
+            string newversionData = GetLatestVersionData("https://rebrand.ly/rrttool-CheckVersion");
 
             if (newversionData != null)
             {
@@ -201,7 +201,7 @@ namespace TS_SE_Tool
             labelStatus.Text = "Downloading...";
 
             Task t = Task.Run( () => {
-                var url = "https://rebrand.ly/TS-SET-Download";
+                var url = "https://rebrand.ly/rrttool-descarga";
                 var filename = Directory.GetCurrentDirectory() + @"\updater\ts.set.newversion.zip";
 
                 try
