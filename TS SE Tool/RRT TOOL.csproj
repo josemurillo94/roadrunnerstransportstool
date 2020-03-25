@@ -1,0 +1,329 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{95EBA823-26BF-4A49-A674-E294B403BC99}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TS_SE_Tool</RootNamespace>
+    <AssemblyName>TS SE Tool</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugSymbols>false</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>TS_SE_Tool.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\MainIco.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ErikEJ.SqlCe40, Version=2.1.6.14, Culture=neutral, PublicKeyToken=03b0b5a60fec3719, processorArchitecture=MSIL">
+      <HintPath>..\packages\ErikEJ.SqlCeBulkCopy.2.1.6.15\lib\net40\ErikEJ.SqlCe40.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=1.0.0.999, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpZipLib.1.0.0\lib\net45\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="OpenPainter.ColorPicker">
+      <HintPath>.\OpenPainter.ColorPicker.dll</HintPath>
+    </Reference>
+    <Reference Include="Salient.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=03b0b5a60fec3719, processorArchitecture=MSIL">
+      <HintPath>..\packages\ErikEJ.SqlCeBulkCopy.2.1.6.15\lib\net40\Salient.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Compact.4.0.8876.1\lib\net40\System.Data.SqlServerCe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Deployment, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.Compression.FileSystem, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Numerics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\FormAboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormAboutBox.Designer.cs">
+      <DependentUpon>FormAboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomClasses\Cargo.cs" />
+    <Compile Include="CustomClasses\Country.cs" />
+    <Compile Include="CustomClasses\ProfileData.cs" />
+    <Compile Include="CustomClasses\SaveFileData.cs" />
+    <Compile Include="CustomClasses\SavefileInfoData.cs" />
+    <Compile Include="CustomClasses\TGASharpLib.cs" />
+    <Compile Include="CustomClasses\TrailerDefinition.cs" />
+    <Compile Include="CustomClasses\City.cs" />
+    <Compile Include="CustomClasses\ExtCargo.cs" />
+    <Compile Include="CustomClasses\ExtCompany.cs" />
+    <Compile Include="CustomClasses\JobAdded.cs" />
+    <Compile Include="CustomClasses\Company.cs" />
+    <Compile Include="CustomClasses\CompanyTruck.cs" />
+    <Compile Include="CustomClasses\CountryDictionary.cs" />
+    <Compile Include="CustomClasses\DDSImageParser.cs" />
+    <Compile Include="CustomClasses\Garages.cs" />
+    <Compile Include="CustomClasses\LevelNames.cs" />
+    <Compile Include="CustomClasses\PlayerData.cs" />
+    <Compile Include="CustomClasses\ProgSettings.cs" />
+    <Compile Include="CustomClasses\Routes.cs" />
+    <Compile Include="CustomClasses\UserCompanyDriverData.cs" />
+    <Compile Include="CustomClasses\UserCompanyTruckData.cs" />
+    <Compile Include="CustomClasses\UserCompanyTruckDataPart.cs" />
+    <Compile Include="CustomClasses\VisitedCity.cs" />
+    <Compile Include="DataManipulation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormCheckUpdates.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormCheckUpdates.Designer.cs">
+      <DependentUpon>FormCheckUpdates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormColorPicker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormConvoyControlPositions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormConvoyControlPositions.Designer.cs">
+      <DependentUpon>FormConvoyControlPositions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormGaragesSoldContent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormGaragesSoldContent.Designer.cs">
+      <DependentUpon>FormGaragesSoldContent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormAddCustomFolder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormAddCustomFolder.Designer.cs">
+      <DependentUpon>FormAddCustomFolder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMethods.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormProgramSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormProgramSettings.Designer.cs">
+      <DependentUpon>FormProgramSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormSettings.designer.cs">
+      <DependentUpon>FormSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormShareUserColors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormShareUserColors.Designer.cs">
+      <DependentUpon>FormShareUserColors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormSplash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormSplash.Designer.cs">
+      <DependentUpon>FormSplash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MethodsDecodeSave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MethodsReadWrite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RMcode\PlainTXTResourceManager.cs" />
+    <Compile Include="RMcode\PlainTXTResourceReader.cs" />
+    <Compile Include="RMcode\PlainTXTResourceSet.cs" />
+    <EmbeddedResource Include="Forms\FormAboutBox.resx">
+      <DependentUpon>FormAboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormCheckUpdates.resx">
+      <DependentUpon>FormCheckUpdates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormAddCustomFolder.resx">
+      <DependentUpon>FormAddCustomFolder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormColorPicker.resx">
+      <DependentUpon>FormColorPicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormConvoyControlPositions.resx">
+      <DependentUpon>FormConvoyControlPositions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormGaragesSoldContent.resx">
+      <DependentUpon>FormGaragesSoldContent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormProgramSettings.resx">
+      <DependentUpon>FormProgramSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormSettings.resx">
+      <DependentUpon>FormSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormShareUserColors.resx">
+      <DependentUpon>FormShareUserColors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormSplash.resx">
+      <DependentUpon>FormSplash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="TS SE Tool.licenseheader" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MainIco.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MainIco.ico" />
+    <Content Include="SII_Decrypt.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>if not exist "$(TargetDir)libs\x86\" md "$(TargetDir)libs\x86\"
+xcopy /s /y "$(SolutionDir)packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\x86\*.*" "$(TargetDir)libs\x86\"
+if not exist "$(TargetDir)libs\amd64\" md "$(TargetDir)libs\amd64\"
+xcopy /s /y "$(SolutionDir)packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\amd64\*.*" "$(TargetDir)libs\amd64\"
+
+ROBOCOPY "$(TargetDir) " "$(TargetDir)libs\ " /XF *.exe *.sdf *.config *.manifest *.cfg *.csv *.log *.pdb *.pdf  /XD gameref img libs logs lang dbs updater /E /IS /MOVE
+if %25errorlevel%25 leq 4 exit 0 else exit %25errorlevel%25</PostBuildEvent>
+  </PropertyGroup>
+</Project>
