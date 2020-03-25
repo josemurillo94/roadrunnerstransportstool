@@ -283,7 +283,7 @@ namespace TS_SE_Tool
                 else
                 {
                     tableLayoutPanel2.RowStyles[3] = new RowStyle(SizeType.Absolute, 30F);
-                    linkLabelNewVersion.Text = String.Format("Cannot check for updates!", NewVersion[0]);
+                    linkLabelNewVersion.Text = String.Format("El programa está sujeto a cambios!", NewVersion[0]);
                     linkLabelNewVersion.LinkBehavior = LinkBehavior.NeverUnderline;
                     linkLabelNewVersion.Links[0].Enabled = false;
                     linkLabelNewVersion.DisabledLinkColor = Color.Crimson;
@@ -299,7 +299,7 @@ namespace TS_SE_Tool
 
         private void Check()
         {
-            string newversionData = GetLatestVersionData("https://rebrand.ly/TS-SET-CheckVersion");
+            string newversionData = GetLatestVersionData("");
 
             if (newversionData != null)
             {

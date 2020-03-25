@@ -37,12 +37,10 @@
             this.toolStripMenuItemExit = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemLanguage = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemHelp = new System.Windows.Forms.ToolStripMenuItem();
+            this.actualizarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripMenuItemDownload = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemCheckUpdates = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.comboBoxProfiles = new System.Windows.Forms.ComboBox();
             this.buttonProfilesAndSavesRefreshAll = new System.Windows.Forms.Button();
             this.comboBoxSaves = new System.Windows.Forms.ComboBox();
@@ -302,51 +300,37 @@
             // toolStripMenuItemHelp
             // 
             this.toolStripMenuItemHelp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.actualizarToolStripMenuItem,
             this.toolStripMenuItemAbout,
             this.toolStripSeparator3,
-            this.toolStripSeparator4,
-            this.toolStripMenuItemDownload});
+            this.toolStripSeparator4});
             this.toolStripMenuItemHelp.Name = "toolStripMenuItemHelp";
             this.toolStripMenuItemHelp.Size = new System.Drawing.Size(44, 20);
             this.toolStripMenuItemHelp.Text = "Help";
             // 
+            // actualizarToolStripMenuItem
+            // 
+            this.actualizarToolStripMenuItem.Name = "actualizarToolStripMenuItem";
+            this.actualizarToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
+            this.actualizarToolStripMenuItem.Text = "Actualizar";
+            this.actualizarToolStripMenuItem.Click += new System.EventHandler(this.actualizarToolStripMenuItem_Click);
+            // 
             // toolStripMenuItemAbout
             // 
             this.toolStripMenuItemAbout.Name = "toolStripMenuItemAbout";
-            this.toolStripMenuItemAbout.Size = new System.Drawing.Size(128, 22);
+            this.toolStripMenuItemAbout.Size = new System.Drawing.Size(126, 22);
             this.toolStripMenuItemAbout.Text = "About";
             this.toolStripMenuItemAbout.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(125, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(123, 6);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(125, 6);
-            // 
-            // toolStripMenuItemDownload
-            // 
-            this.toolStripMenuItemDownload.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItemCheckUpdates,
-            this.toolStripSeparator5});
-            this.toolStripMenuItemDownload.Name = "toolStripMenuItemDownload";
-            this.toolStripMenuItemDownload.Size = new System.Drawing.Size(128, 22);
-            this.toolStripMenuItemDownload.Text = "Download";
-            // 
-            // toolStripMenuItemCheckUpdates
-            // 
-            this.toolStripMenuItemCheckUpdates.Name = "toolStripMenuItemCheckUpdates";
-            this.toolStripMenuItemCheckUpdates.Size = new System.Drawing.Size(152, 22);
-            this.toolStripMenuItemCheckUpdates.Text = "Check updates";
-            this.toolStripMenuItemCheckUpdates.Click += new System.EventHandler(this.latestStableToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator5
-            // 
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(123, 6);
             // 
             // comboBoxProfiles
             // 
@@ -2264,7 +2248,7 @@
             this.MinimumSize = new System.Drawing.Size(850, 660);
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Road Runners Transports Tool v1.0";
+            this.Text = "Road Runners Transports Tool";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMain_FormClosing);
             this.Shown += new System.EventHandler(this.FormMain_Shown);
             this.menuStripMain.ResumeLayout(false);
@@ -2493,12 +2477,10 @@
         private System.Windows.Forms.Button buttonFreightMarketCancelJobEdit;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel17;
         private System.Windows.Forms.Button buttonUserCompanyGaragesManage;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemDownload;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemCheckUpdates;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemProgramSettings;
         private System.Windows.Forms.Label labelCompanyNameSize;
+        private System.Windows.Forms.ToolStripMenuItem actualizarToolStripMenuItem;
     }
 }
 

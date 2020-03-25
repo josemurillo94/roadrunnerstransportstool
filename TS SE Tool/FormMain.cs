@@ -162,6 +162,12 @@ namespace TS_SE_Tool
         private Bitmap ProgressBarGradient; //Program
         private Image RepairImg, RefuelImg, CutomizeImg, PlayerCompanyLogo; //Program
 
+        private void actualizarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string url = "https://github.com/josemurillo94/roadrunnerstransportstool/releases/latest";
+            System.Diagnostics.Process.Start(url);
+        }
+
         private Image[] ADRImgS, ADRImgSGrey, SkillImgSBG, SkillImgS, GaragesImg, GaragesHQImg, CitiesImg, UrgencyImg, CargoTypeImg, CargoType2Img, 
             TruckPartsImg, TrailerPartsImg, GameIconeImg, ProgUIImgs; //Program
 
